@@ -1,5 +1,5 @@
 import { describe, assert, it } from "vitest";
-import { promiseResolve } from "./";
+import { promiseResolve } from ".";
 
 describe("Promise.resolve()", () => {
   it("works with non promise values", async () => {
