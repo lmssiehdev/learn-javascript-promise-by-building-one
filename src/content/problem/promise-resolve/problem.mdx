@@ -1,0 +1,36 @@
+---
+title: Promise Resolve
+---
+
+# What is Promise.resolve()?
+
+according to MDN
+
+The Promise.resolve() static method "resolves" a given value to a Promise. If the value is a promise, that promise is returned; if the value is a thenable, Promise.resolve() will call the then() method with two callbacks it prepared; otherwise the returned promise will be fulfilled with the value.
+
+This function flattens nested layers of promise-like objects (e.g. a promise that fulfills to a promise that fulfills to something) into a single layer — a promise that fulfills to a non-thenable value.
+
+## Example usage
+
+```js
+const resolvedPromise = Promise.resolve("Hello, Promises!");
+resolvedPromise.then((result) => console.log(result)); // Output: Hello, Promises!
+```
+
+## Write a Promise.resolve() Polyfill
+
+Testing Criteria
+
+1. Non-Promise Value:
+
+- Call your promise_resolve function with a non-promise value (e.g., a string or a number).
+- Ensure the returned promise fulfills with the provided value.
+
+2. Existing Promise:
+
+- Create a promise using new Promise() and pass it to your promise_resolve function.
+- Confirm that the returned promise is the same as the existing one.
+
+[Try solving it]()
+
+[Check out solution]()

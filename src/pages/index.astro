@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+
+const posts = await getCollection("problem");
+---
+
+<Layout title="Welcome to Astro.">
+  <div>
+    {
+      posts.map(({ data, slug }) => {
+        return (
+          <div class="my-4 p-2 rounded-sm border shadow ">
+            <a href={`/problem/${slug}`}>Implement {data.title}</a>
+          </div>
+        );
+      })
+    }
+  </div>
+</Layout>
+
+<style>
+  body {
+  }
+</style>
