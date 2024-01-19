@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
-    "test:promise-race": "vitest promise-resolve",
+    "test:promise-race": "vitest promise-race",
     "test:promise-resolve": "vitest promise-resolve",
-    "test:promise-reject": "vitest promise-resolve"
+    "test:promise-reject": "vitest promise-reject",
+    "test:promise-all": "vitest promise-all"
   },
   "keywords": [],
   "author": "",
