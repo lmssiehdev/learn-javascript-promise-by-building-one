@@ -8,7 +8,8 @@
     "test:promise-race": "vitest promise-race",
     "test:promise-resolve": "vitest promise-resolve",
     "test:promise-reject": "vitest promise-reject",
-    "test:promise-all": "vitest promise-all"
+    "test:promise-all": "vitest promise-all",
+    "test:promise-all-settled": "vitest promise-all-settled"
   },
   "keywords": [],
   "author": "",
