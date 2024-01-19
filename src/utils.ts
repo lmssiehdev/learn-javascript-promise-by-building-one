@@ -10,3 +10,24 @@ export function getErrorMessage(error: unknown): string {
   }
   return String(error);
 }
+
+export function getChallengeUrl({
+  paths,
+  startCommand,
+}: {
+  paths: string[];
+  startCommand: string;
+}): string {
+  const params = new URLSearchParams();
+
+  paths.forEach((path) => params.append("file", path));
+  params.append("view", "editor");
+  params.append("startScript", startCommand);
+
+  const url = new URL(
+    "https://stackblitz.com/github/lmssiehdev/learn-javascript-promise-by-building-one/tree/main/examples"
+  );
+  url.search = params.toString();
+
+  return url.toString();
+}
